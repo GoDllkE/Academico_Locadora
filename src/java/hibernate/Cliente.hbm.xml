@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2016 11:17:38 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.Cliente" table="Cliente" catalog="locadoradb" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nome" type="string">
+            <column name="nome" length="50" not-null="true" />
+        </property>
+        <property name="idade" type="int">
+            <column name="idade" not-null="true" />
+        </property>
+        <property name="genero" type="string">
+            <column name="genero" length="25" not-null="true" />
+        </property>
+        <property name="cpf" type="string">
+            <column name="cpf" length="11" unique="true" />
+        </property>
+        <property name="rg" type="string">
+            <column name="rg" length="9" not-null="true" />
+        </property>
+        <property name="telefone" type="string">
+            <column name="telefone" length="11" not-null="true" />
+        </property>
+        <property name="endereco" type="string">
+            <column name="endereco" length="60" not-null="true" />
+        </property>
+        <set name="emprestimos" table="Emprestimo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_cliente" />
+            </key>
+            <one-to-many class="hibernate.Emprestimo" />
+        </set>
+        <set name="reservas" table="Reserva" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_cliente" />
+            </key>
+            <one-to-many class="hibernate.Reserva" />
+        </set>
+    </class>
+</hibernate-mapping>

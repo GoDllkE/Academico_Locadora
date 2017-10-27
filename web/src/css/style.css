@@ -1,0 +1,98 @@
+/* CSS Document By Gustavo Toledo*/
+/*************************************************************/
+/*			Algiment			     */
+/*************************************************************/
+.align-center {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/*************************************************************/
+/*                      Jumbotron			     */
+/*************************************************************/
+.jumbotron-size {
+    height: 500px;
+    margin: 0 auto;
+}
+
+.jumbotron-things {
+    margin-top: 120px;
+}
+
+
+/*************************************************************/
+/*                        Others   			     */
+/*************************************************************/
+.hr {
+    color: #DDDDDD;
+}
+
+/*************************************************************/
+/*                      Formlary			     */
+/*************************************************************/
+.formulario-btn {
+    width: 90%;
+    height: 40px;
+    margin: 0 auto;	
+}
+
+.formularios-painel {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.formularios-center {
+    width: 95%;
+    margin: 0 auto;        
+}
+
+.formularios-left {
+    width: 95%;
+}
+
+.formulario-middle {
+    margin-top: 50%;
+    margin-bottom: 50%;
+    margin: 0 auto;  
+}
+
+.formulario-backround {
+    background-color: #FDFDFD ;
+}
+
+/*************************************************************/
+/*			Thumbnails	    		     */
+/*************************************************************/
+
+.thumbnails-align {
+    margin-left: 16%;
+}
+
+.thumbnails-grid {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.thumbnails-btn {
+    width: 30%;
+    margin: 0 auto;
+}
+
+
+/*************************************************************/
+/*                      Rodape  			     */
+/*************************************************************/
+
+.footer {
+    background-color: #444;
+    text-align: center;
+    height: 70px;
+}
+
+.footer-text {
+    color: #e3e3e3;
+}
+
+.footer-link {
+    color: #e6e6e6;
+}

@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2016 11:17:38 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.Emprestimo" table="Emprestimo" catalog="locadoradb" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="cliente" class="hibernate.Cliente" fetch="select">
+            <column name="id_cliente" />
+        </many-to-one>
+        <many-to-one name="filme" class="hibernate.Filme" fetch="select">
+            <column name="id_filme" />
+        </many-to-one>
+        <property name="confPagamento" type="java.lang.Boolean">
+            <column name="confPagamento" />
+        </property>
+        <property name="dtEntrada" type="date">
+            <column name="dtEntrada" length="10" />
+        </property>
+        <property name="dtRetirada" type="date">
+            <column name="dtRetirada" length="10" />
+        </property>
+        <property name="valorPago" type="java.lang.Float">
+            <column name="valorPago" precision="12" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

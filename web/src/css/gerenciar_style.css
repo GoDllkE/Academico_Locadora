@@ -1,0 +1,56 @@
+/* 
+    Created on : 10/04/2016, 21:54:19
+    Author     : godlike
+*/
+
+/* Para resoluções menores que 480px*/
+.table-action thead {
+    display: none;
+}
+ 
+.table-header {
+    background-color: rgba(444,444,444,0.8);
+}
+
+.table-selected:checked {
+    background-color: rgba(444,444,444,0.8);
+}
+
+/* Retira head da tabela */
+.table-action tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-action td {
+    border: 0;
+}
+
+
+/* Para resoluções de até 767px. */
+@media (max-width: 767px) { 
+.table-responsive {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.table-responsive thead,
+.table-responsive tbody,
+.table-responsive th,
+.table-responsive td,
+.table-responsive tr {
+    display: block;
+}
+
+/* Tabela funcionando como um bloco. */
+.table-responsive td,
+  .table-responsive th {
+    height: 35px;
+}
+
+/* Assim como definimos que o tbody terá um scroll horizontal quando não comportar todo o conteúdo. Além disso, é importante colocar -webkit-overflow-scrolling: touch para pleno funcionamento em alguns dispositivos touch. */
+
+.table-responsive tbody tr {
+    display: inline-block;
+}
+}

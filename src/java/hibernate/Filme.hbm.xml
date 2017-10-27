@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 13/04/2016 11:17:38 by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="hibernate.Filme" table="Filme" catalog="locadoradb" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="classificacao" class="hibernate.Classificacao" fetch="select">
+            <column name="id_classificacao" />
+        </many-to-one>
+        <many-to-one name="diretor" class="hibernate.Diretor" fetch="select">
+            <column name="id_diretor" />
+        </many-to-one>
+        <many-to-one name="genero" class="hibernate.Genero" fetch="select">
+            <column name="id_genero" />
+        </many-to-one>
+        <many-to-one name="produtora" class="hibernate.Produtora" fetch="select">
+            <column name="id_produtora" />
+        </many-to-one>
+        <property name="nome" type="string">
+            <column name="nome" length="60" />
+        </property>
+        <property name="dtEstreia" type="date">
+            <column name="dtEstreia" length="10" />
+        </property>
+        <set name="reservas" table="Reserva" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_filme" />
+            </key>
+            <one-to-many class="hibernate.Reserva" />
+        </set>
+        <set name="emprestimos" table="Emprestimo" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="id_filme" />
+            </key>
+            <one-to-many class="hibernate.Emprestimo" />
+        </set>
+    </class>
+</hibernate-mapping>
